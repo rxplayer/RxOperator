@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53CB945254CE94DD18C85DD6 /* Pods_RxOperator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3C341F695869D46F11953 /* Pods_RxOperator.framework */; };
+		728714622221914D00062EFF /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728714612221914D00062EFF /* BaseController.swift */; };
 		72A59B9322202E7100A3D40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A59B9222202E7100A3D40C /* AppDelegate.swift */; };
 		72A59B9522202E7100A3D40C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A59B9422202E7100A3D40C /* MainController.swift */; };
 		72A59B9822202E7100A3D40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A59B9622202E7100A3D40C /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		2D683454402226DF40C3CA03 /* Pods-RxOperator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxOperator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxOperator/Pods-RxOperator.debug.xcconfig"; sourceTree = "<group>"; };
 		692DE97AFD560D56FFBB815D /* Pods_RxOperatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxOperatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EAD15B7EF9E335D07F491D /* Pods-RxOperatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxOperatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxOperatorUITests/Pods-RxOperatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		728714612221914D00062EFF /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		72A59B8F22202E7100A3D40C /* RxOperator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxOperator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A59B9222202E7100A3D40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A59B9422202E7100A3D40C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				72A59B9222202E7100A3D40C /* AppDelegate.swift */,
+				728714612221914D00062EFF /* BaseController.swift */,
 				72A59B9422202E7100A3D40C /* MainController.swift */,
 				72A59B9622202E7100A3D40C /* Main.storyboard */,
 				72A59B9922202E7300A3D40C /* Assets.xcassets */,
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A59B9522202E7100A3D40C /* MainController.swift in Sources */,
+				728714622221914D00062EFF /* BaseController.swift in Sources */,
 				72A59B9322202E7100A3D40C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

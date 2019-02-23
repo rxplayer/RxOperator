@@ -10,26 +10,40 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MainController: UITableViewController {
+class MainController: UIViewController {
+  
+  @IBOutlet var tableView: UITableView!
   
   let disposeBag = DisposeBag()
+  
+  let headers: [String] = [
+    "Filtering"
+  ]
+  
+  let examples: [String] = [
+    "Ignoring", "Skipping", "Taking", "Distinct"
+  ]
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    tableView.delegate = nil
-    tableView.dataSource = nil
-    
-    let items = Observable.just([
-      "First Item",
-      "Second Item",
-      "Third Item"
-    ])
-    
-    items
+    Observable.from(optional: examples)
       .bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)) { (row, element, cell) in
-        cell.textLabel?.text = "\(element) @ row \(row)"
+        cell.textLabel?.text = element
       }
+      .disposed(by: disposeBag)
+    
+    tableView.rx.itemSelected
+      .subscribe(
+        onNext: { [weak self] indexPath in
+          guard let `self` = self else { return }
+          let index = indexPath.row
+          let vc = BaseController()
+          vc.navTitle = self.examples[index]
+          self.navigationController?.pushViewController(vc, animated: true)
+          print("selected : \(self.examples[index])")
+        }
+      )
       .disposed(by: disposeBag)
   }
 }
